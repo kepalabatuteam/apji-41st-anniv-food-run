@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APJI 41th Anniv Food Run - Rules & Regulations</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00264D;
+            --primary-dark: #001a33;
+            --secondary: #dc2626;
+            --accent: #02386E;
+            --light: #f3f4f6;
+            --dark: #1f2937;
+            --text: #374151;
+            --bg: #f9fafb;
+            --card-bg: #ffffff;
+            --shadow: rgba(0, 0, 0, 0.05);
+            --border: #e5e7eb;
+            --gradient-start: #00264D;
+            --gradient-end: #02386E;
+        }
+
+        .dark-mode {
+            --primary: #3b82f6;
+            --primary-dark: #60a5fa;
+            --secondary: #ef4444;
+            --accent: #1d4ed8;
+            --light: #1f2937;
+            --dark: #f3f4f6;
+            --text: #e5e7eb;
+            --bg: #111827;
+            --card-bg: #1f2937;
+            --shadow: rgba(0, 0, 0, 0.2);
+            --border: #374151;
+            --gradient-start: #00264D;
+            --gradient-end: #02386E;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--bg);
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            background: linear-gradient(120deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            object-fit: contain;
+            background: white;
+            padding: 3px;
+        }
+
+        .navbar-logo-text {
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .navbar-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+            align-items: center;
+        }
+
+        .navbar-item {
+            position: relative;
+        }
+
+        .navbar-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 10px 0;
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .navbar-link:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .navbar-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s;
+        }
+
+        .navbar-link:hover::after {
+            width: 100%;
+        }
+
+        .navbar-link.active {
+            color: #ffd700;
+        }
+
+        .navbar-link.active::after {
+            width: 100%;
+            background: #ffd700;
+        }
+
+        .navbar-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 30px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: white;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .page-title {
+            text-align: center;
+            margin: 40px 0 30px;
+            color: var(--primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .page-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            border-radius: 2px;
+        }
+
+        .intro {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 25px var(--shadow);
+            text-align: center;
+            border-left: 5px solid var(--accent);
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: var(--text);
+        }
+
+        /* Tabs Navigation */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tab {
+            padding: 12px 25px;
+            background-color: var(--card-bg);
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        .tab.active {
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            color: white;
+            border-color: transparent;
+        }
+
+        /* Rules Content */
+        .rules-content {
+            display: none;
+        }
+
+        .rules-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .rule-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px var(--shadow);
+            transition: transform 0.3s ease;
+            border-top: 5px solid var(--primary);
+        }
+
+        .rule-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .rule-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .rule-card ul {
+            list-style-type: none;
+        }
+
+        .rule-card li {
+            margin-bottom: 15px;
+            padding-left: 35px;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .rule-card li:before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.8rem;
+            position: absolute;
+            left: 15px;
+            top: -5px;
+        }
+
+        .rule-card ul ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .rule-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dotted var(--primary);
+            transition: all 0.3s;
+        }
+
+        .rule-card a:hover {
+            color: var(--primary-dark);
+            border-bottom: 1px solid var(--primary-dark);
+        }
+
+        .important-note {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 35px;
+            margin: 50px auto;
+            box-shadow: 0 10px 25px var(--shadow);
+            border-left: 5px solid var(--secondary);
+            text-align: center;
+        }
+
+        .important-note h2 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            font-size: 1.8rem;
+        }
+
+        .important-note p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            background: linear-gradient(120deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.1rem;
+        }
+
+        .icon-wrapper {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .icon-wrapper i {
+            color: white;
+            font-size: 1.3rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .navbar-menu {
+                gap: 20px;
+            }
+            
+            .navbar-link {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-container {
+                padding: 10px 15px;
+            }
+            
+            .navbar-menu {
+                position: fixed;
+                left: -100%;
+                top: 60px;
+                flex-direction: column;
+                background: linear-gradient(120deg, var(--gradient-start), var(--gradient-end));
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 15px var(--shadow);
+                padding: 20px 0;
+                gap: 0;
+            }
+            
+            .navbar-menu.active {
+                left: 0;
+            }
+            
+            .navbar-item {
+                margin: 15px 0;
+            }
+            
+            .navbar-link {
+                padding: 15px;
+                display: block;
+            }
+            
+            .navbar-toggle {
+                display: block;
+            }
+            
+            .tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tab {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            /* Fixed contact info alignment for mobile */
+            .contact-info {
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                width: 100%;
+            }
+            
+            .contact-info p {
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .rule-card {
+                padding: 20px;
+            }
+            
+            .rule-card h3 {
+                font-size: 1.3rem;
+            }
+            
+            .icon-wrapper {
+                margin: 0 auto;
+            }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px var(--shadow);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-container">
+                <a href="#" class="navbar-logo">
+                    <img src="https://s6.imgcdn.dev/YQj64O.jpg" alt="APJI Logo">
+                    <span class="navbar-logo-text">APJI Food Run</span>
+                </a>
+                
+                <ul class="navbar-menu" id="navbarMenu">
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link active">Rules & Regulations</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="entry-list.html" class="navbar-link">Entry List</a>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                            <span id="themeText">Dark Mode</span>
+                        </button>
+                    </li>
+                </ul>
+                
+                <button class="navbar-toggle" id="navbarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="page-title">Peraturan dan Regulasi</h2>
+
+        <section class="intro">
+            <p>Dengan mengikuti kegiatan ini, Anda setuju untuk patuh terhadap peraturan dan regulasi ini. Mohon untuk dibaca dengan teliti untuk memastikan sebuah pengalaman yang aman dan menyenangkan untuk semua peserta.</p>
+        </section>
+
+        <div class="tabs">
+            <div class="tab active" data-tab="registration">
+                <i class="fas fa-file-pen"></i> Registrasi
+            </div>
+            <div class="tab" data-tab="general">
+                <i class="fas fa-gear"></i> Ketentuan Umum
+            </div>
+            <div class="tab" data-tab="winners">
+                <i class="fas fa-medal"></i> Pemenang & <i>Finishers</i></i>
+            </div>
+            <div class="tab" data-tab="disqualification">
+                <i class="fas fa-user-xmark"></i> Diskualifikasi
+            </div>
+        </div>
+
+        <div class="rules-content active" id="registration-content">
+            <div class="rule-card">
+                <h3><i class="fas fa-file-pen"></i> Ketentuan Registrasi</h3>
+                <ul>
+                    <li>Usia peserta untuk mengikuti perlombaan ini adalah:
+                        <ul>
+                            <li>Umum = 17 - 44 tahun</li>
+                            <li>Master >= 45 tahun</li>
+                            <li>Pelajar SMP = 13 - 15 tahun atau siswa/i aktif SMP/sederajat, dibuktikan dengan kartu pelajar yang aktif)</li>
+                        </ul>
+                    </li>
+                    <li>Peserta dengan usia di bawah 17 tahun tetap dapat mengikuti perlombaan dengan syarat melampirkan Surat Keterangan dari orang tua/wali yang membebaskan tanggung jawab penyelenggara apabila terjadi sesuatu pada peserta yang tidak berhubungan dengan teknis perlombaan. (Unduh surat pernyataan <a href="https://drive.google.com/file/d/1j9BEP5pRr0q9rRK0GH9kJDVzOKCCbLH3/view?usp=drive_link">disini</a>)</li>
+                    <li>Formulir registrasi akan tutup pada saat kuota pelari terpenuhi.</li>
+                    <li>Pastikan alamat email dan nomor WA yang diinput adalah benar untuk memudahkan panitia penyelenggara mengirimkan informasi terkait kegiatan ini.</li>
+                    <li><strong>Biaya Pendaftaran yang sudah dibayarkan adalah tidak dapat dikembalikan (non-refundable)</strong> dan Penyelenggara berhak untuk menolak dan membatalkan pendaftaran bagi pendaftar yang ditemukan memberikan keterangan yang tidak benar, tidak melakukan pembayaran sebagaimana mestinya, atau gagal memenuhi persyaratan lomba.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rules-content" id="general-content">
+            <div class="rule-card">
+                <h3><i class="fas fa-gear"></i> Ketentuan Umum</h3>
+                <ul>
+                    <li>Peserta hanya diperkenankan MENDAFTAR 1 KALI. Jika peserta mendaftar lebih dari 1 kali (dengan data yang sama), maka data yang terakhir di-submit yang akan dianggap valid.</li>
+                    <li>Mohon pastikan alamat email dan nomor WA yang diinput adalah benar untuk memudahkan panitia penyelenggara mengirimkan informasi terkait kegiatan ini. Pesan informasi akan dikirimkan ke alamat email and nomor telepon (WA) berdasarkan data yang telah diinput oleh peserta melalui formulir ini.</li>
+                    <li>Pendaftaran dan nomor dada peserta tidak dapat dipindahtangankan atau diperjualbelikan kepada pihak lain.</li>
+                    <li>Data yang didaftarkan harus sesuai dengan yang peserta miliki (bukan menggunakan nama samaran atau menggunakan nama orang lain).</li>
+                    <li>Menjual, mengalihkan, atau memalsukan nomor dada peserta kepada orang lain akan menyebabkan diskualifikasi dan larangan setiap individu yang terlibat dalam acara berikutnya, juga jika benar terbukti melakukan pelanggaran, panitia penyelenggara dapat melaporkan ke pihak berwajib.</li>
+                    <li>Informasi kegiatan mendatang, akan diupdate melalui akun instagram <strong><a href="https://instagram.com/apjidpcbalikpapan">@apjidpcbalikpapan</a></strong> dan <strong><a href="https://www.instagram.com/kepalabatuteam">@kepalabatuteam</a></strong></li>
+                    <li>Data/informasi yang bersifat rahasia (<i>confidential</i>) akan digunakan secara internal untuk keperluan kegiatan dan tidak akan disebarluaskan dan/atau diperjualbelikan.</li>
+                    <li>Peserta wajib mematuhi semua tata tertib berolahraga dan semua petunjuk serta pedoman yang diberikan pihak penyelenggara.</li>
+                    <li>Peserta wajib mengetahui dan berlari seusai dengan rute yang telah ditentukan.</li>
+                    <li>Peserta wajib menjunjung tinggi sportivitas selama kegiatan dan berkomitmen tidak akan melakukan perbuatan yang merugikan peserta lain.</li>
+                    <li>Bagi peserta yang memiliki penyakit kronis atau bawaan yang sudah diketahui sebelum acara, wajib memberitahukan kepada Panitia dan membawa obat-obatan pribadi (contoh: <i>inhaer</i>).</li>
+                    <li>Keselamatan peserta selama acara berlangsung adalah tanggung jawab masing-masing peserta.</li>
+                    <li>Peserta menyetujui, mengetahui, dan mengerti akan adanya risiko dan bahaya yang muncul dari keikutsertaan dalam <i>event</i> dan tidak berhak menuntuk panitia atas segala kejadian yang dapat menyebabkan cedera tubuh, cacat tubuh, atau kematian.</li>
+                    <li>Dengan ini saya menyatakan bahwa data dan informasi yang saya submit adalah benar dan mengisi tanpa ada unsur paksaan dari pihak manapun. Jika nanti ditemukan adanya ketidaksesuaian data, maka saya bertanggung jawab penuh atas konsekuensi dan menerima apapun keputusan panitia penyelenggara.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rules-content" id="winners-content">
+            <div class="rule-card">
+                <h3><i class="fas fa-medal"></i> PEMENANG & <i>FINISHER</i></h3>
+                <ul>
+                    <li>Seluruh <i>finisher</i> berhak mendapatkan medali.</li>
+                    <li>Keputusan juri terkait penentuan pemenang bersifat mutlak dan tidak dapat diganggu gugat.</li>
+                    <li>Apabila terjadi kecurangan, peserta dapat melakukan protes secara verbal serta diikuti dengan protes secara tertulis sebelum pengumuman pemenang.</li>
+                    <li>Surat protes dilampirkan dengan bukti serta ditandatangani menggunakan meterai. Biaya protes sebesar Rp500.000,- (lima ratus ribu rupiah).</li>
+                    <li>Apabila keputusan awal juri terbukti benar, biaya protes peserta dianggap hangus.</li>
+                    <li>Panitia memiliki hak untuk membatalkan, mengubah, atau mengganti segala hadiah sewaktu-waktu dengan atau tanpa melakukan pemberitahuan kepada peserta.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="rules-content" id="disqualification-content">
+            <div class="rule-card">
+                <h3><i class="fas fa-user-xmark"></i> Diskualifikasi</h3>
+                <ul>
+                    <li>Panitia berhak untuk mendiskualifikasi peserta dan biaya pendaftaran dianggap hangus, apabila terbukti telah memberikan data dan informasi palsu.</li>
+                    <li>Peserta memulai lomba di luar waktu dan jalur yang telah ditentukan akan didiskualifikasi dan tidak berhak mendapatkan medali <i>finisher</i>.</li>
+                    <li>Peserta yang terkena <i>Cut-Off Time</i> (COT) tidak berhak mendapatkan medali <i>finisher.</i></li>
+                    <li>Peserta yang menggunakan BIB orang lain dan BIB palsu akan didiskualifikasi.</li>
+                    <li>Peserta yang menyelesaikan perlombaan di luar ketentuan di atas, dianggap gugur dan tidak berhak mendapatkan medali atau hadiah.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="important-note">
+            <h2><i class="fas fa-exclamation-circle"></i> Pemberitahuan Penting</h2>
+            <p>Panitia penyelenggara berhak untuk mendiskualifikasi peserta yang melanggar peraturan atau melakukan tindakan yang tidak sportif. Keputusan panitia penyelenggara tidak dapat diganggu gugat.</p>
+            <p>Jika terjadi cuaca buruk atau kondisi yang tidak aman, kegiatan mungkin akan diundur, dirubah, atau bahkan dibatalkan demi keamanan dan keselamatan peserta.</p>
+        </div>
+
+        <footer>
+            <p>© 2025 Kepala Batu Team. All rights reserved.</p>
+            <div class="contact-info">
+                <p><span class="icon-wrapper"><i class="fas fa-envelope"></i></span> kepalabatuteam@gmail.com</p>
+                <p><span class="icon-wrapper"><i class="fa-brands fa-whatsapp"></i></span> (62) 821 5481 5113</p>
+                <p><span class="icon-wrapper"><i class="fas fa-map-marker-alt"></i></span> Balikpapan, Indonesia</p>
+            </div>
+        </footer>
+    </div>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Function to set theme based on system preference
+        function setThemeBasedOnSystemPreference() {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('themeIcon').className = 'fas fa-sun';
+                document.getElementById('themeText').textContent = 'Light Mode';
+            } else {
+                document.body.classList.remove('dark-mode');
+                document.getElementById('themeIcon').className = 'fas fa-moon';
+                document.getElementById('themeText').textContent = 'Dark Mode';
+            }
+        }
+
+        // Set initial theme based on system preference
+        setThemeBasedOnSystemPreference();
+
+        // Listen for system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            setThemeBasedOnSystemPreference();
+        });
+
+        // Toggle theme manually
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            if (document.body.classList.contains('dark-mode')) {
+                document.body.classList.remove('dark-mode');
+                document.getElementById('themeIcon').className = 'fas fa-moon';
+                document.getElementById('themeText').textContent = 'Dark Mode';
+            } else {
+                document.body.classList.add('dark-mode');
+                document.getElementById('themeIcon').className = 'fas fa-sun';
+                document.getElementById('themeText').textContent = 'Light Mode';
+            }
+        });
+
+        // Tab functionality
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.rules-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const target = tab.getAttribute('data-tab');
+                
+                // Remove active class from all tabs and contents
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked tab and corresponding content
+                tab.classList.add('active');
+                document.getElementById(`${target}-content`).classList.add('active');
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Mobile navbar toggle
+        const navbarToggle = document.getElementById('navbarToggle');
+        const navbarMenu = document.getElementById('navbarMenu');
+        
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('active');
+        });
+
+        // Close navbar when clicking on a link
+        document.querySelectorAll('.navbar-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navbarMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
