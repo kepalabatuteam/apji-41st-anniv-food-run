@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APJI 41th Anniv Food Run - Registration</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Registration Page Specific Styles -->
+    <link rel="stylesheet" href="css/registration.css">
+    
+    <!-- Global Scripts (defer) -->
+    <script src="js/theme.js" defer></script>
+    <script src="js/navbar.js" defer></script>
+    <script src="js/back-to-top.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-container">
+                <a href="index.html" class="navbar-logo">
+                    <img src="https://s6.imgcdn.dev/YQj64O.jpg" alt="APJI Logo">
+                    <span class="navbar-logo-text">APJI Food Run</span>
+                </a>
+                
+                <ul class="navbar-menu" id="navbarMenu">
+                    <li class="navbar-item">
+                        <a href="index.html" class="navbar-link">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="rules-and-regulations.html" class="navbar-link">Rules & Regulations</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="entry-list.html" class="navbar-link">Entry List</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="registration.html" class="navbar-link active">Registration</a>
+                    </li>
+                    <li class="navbar-item">
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                            <span id="themeText">Dark Mode</span>
+                        </button>
+                    </li>
+                </ul>
+                
+                <button class="navbar-toggle" id="navbarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="page-title">Pendaftaran</h2>
+
+        <div class="registration-options">
+            <div class="registration-card individual">
+                <div class="registration-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+                <h3>Pendaftaran Perorangan</h3>
+                <p>Daftar sebagai peserta individu untuk mengikuti kegiatan lari ini.</p>
+                <button class="cta-button" id="individualReg">Daftar Sekarang</button>
+            </div>
+
+            <div class="registration-card collective">
+                <div class="registration-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Pendaftaran Kolektif</h3>
+                <p>Daftarkan kelompok atau komunitas Anda dengan minimal 5 peserta.</p>
+                <button class="cta-button" id="collectiveReg">Daftar Kelompok</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Kepala Batu Team. All rights reserved.</p>
+        <div class="contact-info">
+            <p><span class="icon-wrapper"><i class="fas fa-envelope"></i></span> kepalabatuteam@gmail.com</p>
+            <p><span class="icon-wrapper"><i class="fa-brands fa-whatsapp"></i></span> (62) 821 5481 5113</p>
+            <p><span class="icon-wrapper"><i class="fas fa-map-marker-alt"></i></span> Balikpapan, Indonesia</p>
+        </div>
+    </footer>
+
+    <!-- Collective Registration Modal -->
+    <div class="modal" id="collectiveModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Pendaftaran Kolektif</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Kumpulkan Data Peserta</h4>
+                            <p><a href="https://docs.google.com/spreadsheets/d/12QPq7-tamXo23I6ojVkmTyBFnHfG4Jbk/edit?usp=drive_link&ouid=107373506699553992496&rtpof=true&sd=true">Download Formulir Registrasi Kolektif</a> dan lengkapi data peserta yang akan didaftarkan.</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Hubungi Panitia</h4>
+                            <p>Kirim Formulir Registrasi Kolektif yang telah diisi ke nomor Whatsapp Panitia. Panitia akan menginformasikan kembali jumlah biaya pendaftaran yang harus dibayarkan.</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Transfer Biaya</h4>
+                            <p>Lakukan transfer biaya pendaftaran sesuai nominal yang telah diinformasikan melalui chat WhatsApp Panitia.</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Kirim Bukti Transfer</h4>
+                            <p>Kirim bukti transfer melalui chat WhatsApp panitia.</p>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>Konfirmasi Pendaftaran</h4>
+                            <p>Tunggu konfirmasi registrasi dari panitia melalui email atau WhatsApp dalam 2x24 jam.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <a href="https://wa.me/6282154815113?text=Halo%2C%20saya%20ingin%20mendaftar%20secara%20kolektif%20untuk%20APJI%20Food%20Run" class="cta-button secondary" target="_blank">Chat WhatsApp Panitia <br>(CHAT ONLY)</a>
+                    <!-- <a href="mailto:kepalabatuteam@gmail.com?subject=Pendaftaran%20Kolektif%20APJI%20Food%20Run" class="cta-button secondary">Kirim Email</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Registration Page Specific Script -->
+    <script src="js/registration.js" defer></script>
+</body>
+</html>
