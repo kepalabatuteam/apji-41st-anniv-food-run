@@ -44,3 +44,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Add animation to prize tables when they come into view
+document.addEventListener('DOMContentLoaded', function() {
+    const prizeCategories = document.querySelectorAll('.prize-category');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    prizeCategories.forEach(category => {
+        category.style.opacity = 0;
+        category.style.transform = 'translateY(20px)';
+        category.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(category);
+    });
+});
