@@ -22,12 +22,11 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Global Styles -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Page Specific Styles -->
     <link rel="stylesheet" href="css/entry-list.css">
@@ -38,6 +37,40 @@
     <script src="js/back-to-top.js" defer></script>
     <script src="js/entry-list.js" defer></script>
 
+    <style>
+        .category-tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.category-tab {
+    padding: 12px 24px;
+    background-color: var(--card-bg);
+    color: var(--text);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    min-width: 120px;
+}
+
+.category-tab:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.category-tab.active {
+    background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+    color: white;
+    border-color: var(--primary);
+}
+    </style>
+
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -45,7 +78,7 @@
         <div class="container">
             <div class="navbar-container">
                 <a href="index.html" class="navbar-logo">
-                    <img src="https://s6.imgcdn.dev/YQj64O.jpg" alt="APJI Logo">
+                    <img src="/images/android-icon-192x192.png" alt="APJI Logo">
                     <span class="navbar-logo-text">APJI 41th Anniversary Food Run</span>
                 </a>
                 
@@ -80,6 +113,13 @@
     <div class="container">
         <h2 class="page-title">Daftar Peserta</h2>
 
+        <div class="category-tabs" id="categoryTabs">
+            <div class="category-tab active" data-category="all">Semua Kategori</div>
+            <div class="category-tab" data-category="Umum">Umum</div>
+            <div class="category-tab" data-category="Pelajar">Pelajar</div>
+            <div class="category-tab" data-category="Master">Master</div>
+        </div>
+
         <div class="controls-container">
             <div class="search-box">
                 <input type="text" id="searchInput" class="search-input" placeholder="Cari peserta...">
@@ -96,7 +136,7 @@
             </button>
         </div>
         
-        <div class="result-count" id="resultCount"></div>
+        <!-- <div class="result-count" id="resultCount"></div> -->
         
         <div class="table-container">
             <table id="recordsTable">
